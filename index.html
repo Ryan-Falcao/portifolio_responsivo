@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portifolio</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        :root{
+            --background-padrao: linear-gradient(147deg,rgba(2, 0, 36, 1) 0%, rgba(2, 2, 59, 1) 52%, rgba(1, 27, 56, 1) 100%);
+            --font-padrao: Arial, Helvetica, sans-serif;
+            --grid:  
+            linear-gradient(rgba(255, 255, 255, 0.171) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.096) 1px, transparent 1px);
+            --shadow: rgba(0, 0, 255, 0.315);
+        }
+        body{
+            margin: 0%;
+            padding: 0%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+        /*div principal*/
+        .principal{
+            width: 100%;
+            min-height: 100vh;
+            background-image: var(--grid), var(--background-padrao);
+            background-size: 40px 40px, 40px 40px, cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: var(--font-padrao);
+            justify-content: space-around;
+        }
+        .foto-div{
+            background-color: white;
+            background-image: url("Ryan_img.jpg");
+            background-size: cover;
+           background-position-y: -30px;
+            width: 400px;
+            height: 400px;
+            border-radius: 100%;
+            box-shadow: 100px 100px 150px 20px var(--shadow);
+        }
+        .princiapal-txt{
+            max-width: 900px;
+            height: 200px;
+            text-align: center;
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .secundario-txt{
+            margin-top: 200px;
+        }
+        .tecnologias{
+            max-width: 900px;
+            height: 60px;
+            margin-top: 40px;
+            z-index: 1;
+        }
+        .tecnologias-img{
+            width: 60px;
+            height: 60px;
+        }
+        .shadow-box{
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            box-shadow: 0px 0px 150px 200px var(--shadow);
+            background-color: var(--shadow);
+            z-index: 0;
+            margin-top: -200px;
+        }
+        h1{
+            z-index: 1;
+        }
+        p{
+            z-index: 1;
+        }
+        .button-div{
+            width: 500px;
+            height: 70px;
+            display: flex;
+            margin-top: 40px;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .principal-button{
+            width: 200px;
+            height: 70px;
+            border-radius: 30px;
+            background-color: rgb(35, 35, 250);
+            color: white;
+            font-family: var(--font-padrao);
+            font-size: 20px;
+            box-shadow: 0px 0px 50px 1px var(--shadow);
+            transition: 0.2s ease-in-out;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            cursor: pointer;
+        }
+        .principal-button:hover{
+            transform: scale(1.2);
+        }
+        /* sobre mim section*/
+        .about-me{
+            width: 100%;
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-image: var(--grid), var(--background-padrao);
+            flex-direction: column;
+        }
+        .space-txt-about-me{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+        }
+      .txt-box-about-me{
+        width: 1100px;
+        height: 400px;
+        display: flex;
+        color: white;
+        font-family: var(--font-padrao);
+        font-size: 35px;
+        text-align: center;
+        z-index: 1;
+        margin-top: 500px;
+        animation: aparecer-txt linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 50%;
+      }
+      @keyframes aparecer-txt{
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 0.5;
+        }
+        100%{
+            opacity: 1;
+        }
+      }
+       .robo-png{
+        max-width: 100%;
+        height: auto; 
+        animation: aparecer_animacao linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 50%;
+       }
+       @keyframes aparecer_animacao{
+
+        from{
+            transform: translateX(100px);
+           
+        }
+         to {
+            transform: translateX(0);
+            
+        }
+
+
+       }
+       .space-box-robo-png{
+        margin-top: -160px    ;
+       }
+       .shadow-box-about-me{
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        background-color: var(--shadow);
+        margin-top: 20px;
+        box-shadow: 0px 0px 100px 100px var(--shadow);
+        z-index: 0;
+       }
+       /*section de contato*/
+       .contato-section{
+        width: 100%;
+        min-height: 100vh;
+        padding: 120px 0;
+        display: flex;
+        flex-direction: column;
+        background-image: var(--grid), var(--background-padrao);
+        background-size: 40px 40px, 40px 40px, cover;
+        align-items: center;
+       }
+       .h1-contato{
+        color: white;
+        font-family: var(--font-padrao);
+        font-size: 50px;
+        margin-top: -40px;
+        animation: aparecer-txt linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 50%;
+       }
+       .formulario-box{
+        width: 700px;
+        height: 650px;
+        background-color: rgb(2, 2, 56);
+        margin-top: 40px;
+        border-radius: 40px;
+        box-shadow: 0px 0px 40px 10px var(--shadow);
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-family: var(--font-padrao);
+        animation: aparecer-y linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 50%;
+       }
+       @keyframes aparecer-y {
+        0%{
+            transform: translateY(300px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+       }
+       .reparticao-formulario{
+        width: 100%;
+        height: 60px;
+        margin-top: 40px;
+        padding-left: 40px;
+        box-sizing: border-box;
+        display: flex;
+        padding-right: 40px;
+        justify-content: space-around;
+        align-items: center;
+       }
+       .input-formulario-txt{
+        width: 90%;
+        height: 40px;
+        font-size: 20px;
+        padding-left: 40px;
+        box-sizing: border-box;
+       }
+       .h1-formulario{
+        font-size: 20px;
+       }
+       .msg-formulario{
+        width: 600px;
+        height: 200px;
+        overflow-y: scroll;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+        padding-top: 20px;
+        resize: none;
+       }
+       .redes-socias{
+        width: 100%;
+        height: 90px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-evenly;
+       }
+       .input-ivite{
+        width: 200px;
+        height: 50px;
+        margin-top: 20px;
+        background-color: rgb(35, 35, 250);
+        color: white;
+        border: none;
+        border-radius: 20px;
+        font-size: 20px;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+       }
+       .input-ivite:hover{
+        transform: scale(1.1);
+       }
+       .shadow-box-1{
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        box-shadow: 350px 350px 200px 170px rgba(255, 255, 0, 0.329);
+        margin-right: -50%;
+        margin-top: -130px;
+       }
+       .box-shadow-2{
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        box-shadow: 350px 350px 200px 200px rgba(255, 255, 0, 0.329);
+       margin-right: 2100px;
+       margin-top: -400px;
+       }
+       @media(max-width: 1350px){
+
+        .foto-div{
+            width: 300px;
+            height: 300px;
+        }
+        .princiapal-txt{
+            font-size: 20px;
+        }
+        .txt-box-about-me{
+            font-size: 25px;
+        }
+
+       }    
+       @media(max-width:960px){
+        .txt-box-about-me{
+            font-size: 30px;
+            width: 600px;
+            margin-top: 400px;
+        }
+        .space-box-robo-png{
+            width: 400px;
+            height: 400px;
+            margin-top: -300px;
+        }
+        .formulario-box{
+            width: 500px;
+            height: 650px;
+        }
+        .msg-formulario{
+            width: 400px;
+        }
+        .h1-contato{
+            font-size: 30px;
+        }
+         .foto-div{
+            width: 200px;
+            height: 200px;
+        }
+         .princiapal-txt{
+            font-size: 15px;
+        }
+        .txt-box-about-me{
+            font-size: 15px;
+        }
+        .principal-button{
+            width: 180px;
+            height: 60px;
+        }
+       }
+       @media(max-width:700px){
+        .foto-div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            margin-top: -500px;
+            z-index: 2;
+        }
+       }
+       @media(max-width:530px){
+        .txt-box-about-me{
+            width: 250px;
+            margin-top: 300px;
+        }
+        .formulario-box{
+            width: 300px;
+            height: 650px;
+        }
+        .msg-formulario{
+            width: 250px;
+        }
+         .h1-formulario{
+        font-size: 15px;
+       }
+       .input-formulario-txt{
+        text-align: start;
+       }
+       .shadow-box-1{
+        margin-right: 300px;
+       }
+       .box-shadow-2{
+        margin-left: 500px;
+        margin-top: -600px;
+       }
+        .princiapal-txt{
+            font-size: 10px;
+            width: 90%;
+        }
+        .secundario-txt{
+            margin-top: 150px;
+        }
+        .principal-button{
+            height: 40px;
+            width: 150px;
+            font-size: 10px;
+        }
+        .button-div{
+            justify-content: space-evenly;
+        }
+        .shadow-box-1{
+            display: none;
+        }
+        .box-shadow-2{
+            display: none;
+        }
+        
+       }
+      
+    </style>
+</head>
+<body>
+    <section class="principal">
+        <div class="foto-div"></div>
+        <div class="princiapal-txt">
+        <h1>Ryan Marques Monteiro Falcao</h1>
+        <div class="shadow-box"></div>
+        <p class="secundario-txt">Estudante de Engenharia de software</p>
+        <div class="tecnologias">
+            <svg  class="tecnologias-img" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M0 0h256v256H0V0z" fill="#F7DF1E"></path><path d="M67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371 7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259-19.245 0-30.416-9.967-36.087-21.996M152.381 211.354l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607 9.969 0 16.325-4.984 16.325-11.858 0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257 0-18.044 13.747-31.792 35.228-31.792 15.294 0 26.292 5.328 34.196 19.247L210.29 147.43c-4.125-7.389-8.591-10.31-15.465-10.31-7.046 0-11.514 4.468-11.514 10.31 0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804 0 21.654-17.012 33.51-39.867 33.51-22.339 0-36.774-10.654-43.819-24.574"></path></g></svg>
+           <svg class="tecnologias-img" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"></path> <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"></path> <path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"></path> </g></svg>
+            <svg class="tecnologias-img" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#1172B8"></path> <path d="M26 5H16V29.5L24 27L26 5Z" fill="#33AADD"></path> <path d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z" fill="white"></path> </g></svg>
+             <div class="button-div">
+               <a class="principal-button" href="#about-me">Sobre Mim</a><a href="#contato-section"  class="principal-button">Contato</a>
+            </div>
+        </div>
+        
+    </section>
+    <section id="about-me" class="about-me">
+        <div class="space-txt-about-me">
+                <div class="foto-div-about-me">
+
+                </div>
+
+                 <div class="txt-box-about-me">
+                        Sou estudante de Engenharia de Software com foco em desenvolvimento front-end.
+                        Tenho experiência com HTML, CSS e JavaScript, além de conhecimentos em POO e integração com Node.js e MySQL.
+                        Busco oportunidade de estágio para evoluir como desenvolvedor full-stack.
+                </div>
+                
+        </div>
+ <div class="shadow-box-about-me">
+
+        </div>
+        <div class="space-box-robo-png">
+                <img class="robo-png" src="mao_robotica.png" alt="">
+        </div>
+
+    </section>
+    
+    <section id="contato-section" class="contato-section">
+        <div class="shadow-box-1">
+
+        </div>
+        <h1 class="h1-contato">
+            Entre agora em contato
+        </h1>
+        <div class="formulario-box">
+           <div class="reparticao-formulario">
+            <h1 class="h1-formulario">Digite seu Nome:</h1><input class="input-formulario-txt" type="text" >
+           </div>
+           <div class="reparticao-formulario">
+            <h1 class="h1-formulario">Digite seu Gmail:</h1><input class="input-formulario-txt" type="text" >
+           </div>
+           <h1 class="h1-formulario">
+            Escreva sua mensagem(opcional)
+           </h1>
+           <textarea class="msg-formulario" name="" id=""></textarea>
+           <input id="input-confirm"  class="input-ivite" type="button" value="Enviar">
+           <div class="redes-socias">
+            <a href="https://www.linkedin.com/in/ryan-falca%CC%83o-0a4775397/"><svg width="70px" height="70px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#0A66C2" d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"></path></g></svg></a>
+            <a href="https://github.com/Ryan-Falcao"><svg  width="70px" height="70px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>github [#142]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]"> </path> </g> </g> </g> </g></svg></a>
+            <a href="mailto:ryanmarques2007f@gmail.com"><svg  width="70px" height="70px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2 11.9556C2 8.47078 2 6.7284 2.67818 5.39739C3.27473 4.22661 4.22661 3.27473 5.39739 2.67818C6.7284 2 8.47078 2 11.9556 2H20.0444C23.5292 2 25.2716 2 26.6026 2.67818C27.7734 3.27473 28.7253 4.22661 29.3218 5.39739C30 6.7284 30 8.47078 30 11.9556V20.0444C30 23.5292 30 25.2716 29.3218 26.6026C28.7253 27.7734 27.7734 28.7253 26.6026 29.3218C25.2716 30 23.5292 30 20.0444 30H11.9556C8.47078 30 6.7284 30 5.39739 29.3218C4.22661 28.7253 3.27473 27.7734 2.67818 26.6026C2 25.2716 2 23.5292 2 20.0444V11.9556Z" fill="white"></path> <path d="M22.0515 8.52295L16.0644 13.1954L9.94043 8.52295V8.52421L9.94783 8.53053V15.0732L15.9954 19.8466L22.0515 15.2575V8.52295Z" fill="#EA4335"></path> <path d="M23.6231 7.38639L22.0508 8.52292V15.2575L26.9983 11.459V9.17074C26.9983 9.17074 26.3978 5.90258 23.6231 7.38639Z" fill="#FBBC05"></path> <path d="M22.0508 15.2575V23.9924H25.8428C25.8428 23.9924 26.9219 23.8813 26.9995 22.6513V11.459L22.0508 15.2575Z" fill="#34A853"></path> <path d="M9.94811 24.0001V15.0732L9.94043 15.0669L9.94811 24.0001Z" fill="#C5221F"></path> <path d="M9.94014 8.52404L8.37646 7.39382C5.60179 5.91001 5 9.17692 5 9.17692V11.4651L9.94014 15.0667V8.52404Z" fill="#C5221F"></path> <path d="M9.94043 8.52441V15.0671L9.94811 15.0734V8.53073L9.94043 8.52441Z" fill="#C5221F"></path> <path d="M5 11.4668V22.6591C5.07646 23.8904 6.15673 24.0003 6.15673 24.0003H9.94877L9.94014 15.0671L5 11.4668Z" fill="#4285F4"></path> </g></svg></a>
+        </div>
+        </div>
+        <div class="box-shadow-2"></div>
+    </section>
+    <script>
+        var input_confirm = document.getElementById("input-confirm");
+        
+        input_confirm.addEventListener("click", function enviar_resposta(){
+
+            alert("O envio de mensagens ainda está em desenvolvimento. Por favor, entre em contato pelas minhas outras redes")
+        })
+    </script>
+</body>
+</html>
